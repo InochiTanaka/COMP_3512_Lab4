@@ -25,7 +25,16 @@ using namespace std;
 			Vector & operator++(int);
 			Vector & operator--();
 			Vector & operator--(int);
+			Vector & operator=(Vector rhs);
 			friend ostream& operator<<(ostream& os, const Vector& vect);
 			void swap(Vector & lhs, Vector & rhs);
+			Vector & operator=(Vector rhs);
+
+			Vector & operator+=(const Vector & rhs);
+			Vector & operator-=(const Vector & rhs);
+
+			friend Vector operator+(Vector lhs, const Vector & rhs);
+			friend Vector operator-(Vector lhs, const Vector & rhs);
+
 
 	};

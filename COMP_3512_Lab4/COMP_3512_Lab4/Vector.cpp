@@ -102,10 +102,44 @@ Vector & Vector::operator--(int)
 	return temp;
 }
 
+Vector & Vector::operator=(Vector rhs)
+{
+	swap(*this, rhs);
+	return *this;
+}
+
 void Vector::swap(Vector & lhs, Vector & rhs)
 {
 	using std::swap;
 	swap(lhs.x, rhs.x);
 	swap(lhs.y, rhs.y);
 	swap(lhs.z, rhs.z);
+}
+
+Vector & Vector::operator+=(const Vector & vect)
+{
+	x += vect.x;
+	y += vect.y;
+	z += vect.z;
+	return *this;
+}
+
+Vector & Vector::operator-=(const Vector & vect)
+{
+	x -= vect.x;
+	y -= vect.y;
+	z -= vect.z;
+	return *this;
+}
+
+Vector operator+(Vector lhs, const Vector & rhs)
+{
+	lhs += rhs;
+	return lhs;
+}
+
+Vector operator-(Vector lhs, const Vector & rhs)
+{
+	lhs -= rhs;
+	return lhs;
 }
