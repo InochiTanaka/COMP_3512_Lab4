@@ -71,3 +71,35 @@ inline ostream & operator<<(ostream & os, const Vector& vect)
 	
 	return os;
 }
+
+Vector & Vector::operator++()
+{
+	x++;
+	y++;
+	z++;
+	return *this;
+}
+
+Vector & Vector::operator++(int)
+{
+	Vector temp(*this);
+	operator++();
+	return temp;
+}
+
+Vector & Vector::operator--()
+{
+	x--;
+	y--;
+	z--;
+	return *this;
+}
+
+Vector & Vector::operator--(int)
+{
+	Vector temp(*this);
+	operator--();
+	return temp;
+}
+
+

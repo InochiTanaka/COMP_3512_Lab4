@@ -21,6 +21,10 @@ using namespace std;
 			void set_Y(Vector &vect);
 			void set_Z(Vector &vect);
 			void clear();
+			Vector & operator++();
+			Vector & operator++(int);
+			Vector & operator--();
+			Vector & operator--(int);
 			friend ostream& operator<<(ostream& os, const Vector& vect);
 
 
