@@ -21,11 +21,7 @@ using namespace std;
 			void set_Y(Vector &vect);
 			void set_Z(Vector &vect);
 			void clear();
-
-		private:
-			double mX;
-			double mY;
-			double mZ;
+			friend ostream& operator<<(ostream& os, const Vector& vect);
 
 
 	};

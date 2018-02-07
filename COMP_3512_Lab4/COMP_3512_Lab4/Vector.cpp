@@ -60,3 +60,14 @@ void Vector::clear()
 	y = 0;
 	z = 0;
 }
+
+inline ostream & operator<<(ostream & os, const Vector& vect)
+{
+
+	os << "X = " << vect.x << endl
+		<< "Y = " << vect.y << endl
+		<< "Z = " << vect.z << endl
+		 << endl;
+	
+	return os;
+}
