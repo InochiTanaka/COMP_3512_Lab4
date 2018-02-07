@@ -20,6 +20,7 @@ using namespace std;
 			void set_X(Vector &vect);
 			void set_Y(Vector &vect);
 			void set_Z(Vector &vect);
+			void clear();
 
 		private:
 			double mX;
