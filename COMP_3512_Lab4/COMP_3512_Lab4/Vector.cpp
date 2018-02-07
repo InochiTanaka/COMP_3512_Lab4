@@ -80,7 +80,7 @@ Vector & Vector::operator++()
 	return *this;
 }
 
-Vector & Vector::operator++(int)
+Vector Vector::operator++(int)
 {
 	Vector temp(*this);
 	operator++();
@@ -95,7 +95,7 @@ Vector & Vector::operator--()
 	return *this;
 }
 
-Vector & Vector::operator--(int)
+Vector Vector::operator--(int)
 {
 	Vector temp(*this);
 	operator--();
@@ -156,4 +156,9 @@ Vector Vector::operator*(double d)
 	z *= d;
 
 	return *this;
+}
+
+int main() 
+{
+	return 0;
 }
