@@ -26,6 +26,6 @@ using namespace std;
 			Vector & operator--();
 			Vector & operator--(int);
 			friend ostream& operator<<(ostream& os, const Vector& vect);
-
+			void swap(Vector & lhs, Vector & rhs);
 
 	};

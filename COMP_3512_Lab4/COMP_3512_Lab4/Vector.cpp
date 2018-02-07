@@ -102,4 +102,10 @@ Vector & Vector::operator--(int)
 	return temp;
 }
 
-
+void Vector::swap(Vector & lhs, Vector & rhs)
+{
+	using std::swap;
+	swap(lhs.x, rhs.x);
+	swap(lhs.y, rhs.y);
+	swap(lhs.z, rhs.z);
+}
