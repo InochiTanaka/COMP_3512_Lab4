@@ -14,6 +14,9 @@ using namespace std;
 			~Vector();
 			void three_parameter();
 			Vector(const Vector &vect);
+			double get_X();
+			double get_Y();
+			double get_Z();
 
 		private:
 			double mX;

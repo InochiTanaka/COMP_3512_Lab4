@@ -23,3 +23,18 @@ Vector::Vector(const Vector & vect)
 	x = vect.x;
 	y = vect.y;
 }
+
+double Vector::get_X()
+{
+	return x;
+}
+
+double Vector::get_Y()
+{
+	return y;
+}
+
+double Vector::get_Z()
+{
+	return z;
+}
