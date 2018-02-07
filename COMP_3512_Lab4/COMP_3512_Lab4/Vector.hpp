@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+
+using namespace std;
 
 	class Vector
 	{
@@ -9,7 +12,8 @@
 		public:
 			Vector();
 			~Vector();
-			void three_parameter(double x, double y, double z);
+			void three_parameter();
+			Vector(const Vector &vect);
 
 		private:
 			double mX;

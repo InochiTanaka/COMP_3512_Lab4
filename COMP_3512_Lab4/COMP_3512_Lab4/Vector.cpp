@@ -8,9 +8,18 @@ Vector::~Vector()
 {
 }
 
-void Vector::three_parameter(double x, double y, double z)
+void Vector::three_parameter()
 {
-	mX = x;
-	mY = y;
-	mZ = z;
+	cout << "Input X:" << endl;
+	cin >> x;
+	cout << "Input Y:" << endl;
+	cin >> y;
+	cout << "Input Z:" << endl;
+	cin >> z;
+}
+
+Vector::Vector(const Vector & vect)
+{
+	x = vect.x;
+	y = vect.y;
 }
