@@ -38,3 +38,18 @@ double Vector::get_Z()
 {
 	return z;
 }
+
+void Vector::set_X(Vector &vect)
+{
+	vect.x = x;
+}
+
+void Vector::set_Y(Vector &vect)
+{
+	vect.y = y;
+}
+
+void Vector::set_Z(Vector &vect)
+{
+	vect.z = z;
+}
