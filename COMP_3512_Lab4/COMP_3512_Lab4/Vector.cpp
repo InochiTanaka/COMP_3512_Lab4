@@ -143,3 +143,17 @@ Vector operator-(Vector lhs, const Vector & rhs)
 	lhs -= rhs;
 	return lhs;
 }
+
+double operator*(Vector lhs, const Vector & rhs)
+{
+	return (lhs.x*rhs.x)+ (lhs.y*rhs.y) + (lhs.z*rhs.z);
+}
+
+Vector Vector::operator*(double d)
+{
+	x *= d;
+	y *= d;
+	z *= d;
+
+	return *this;
+}
