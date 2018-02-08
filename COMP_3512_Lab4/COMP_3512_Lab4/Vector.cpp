@@ -8,20 +8,18 @@ Vector::~Vector()
 {
 }
 
-void Vector::three_parameter()
+void Vector::three_parameter(double mX, double mY, double mZ)
 {
-	cout << "Input X:" << endl;
-	cin >> x;
-	cout << "Input Y:" << endl;
-	cin >> y;
-	cout << "Input Z:" << endl;
-	cin >> z;
+	x = mX;
+	y = mY;
+	z = mZ;
 }
 
 Vector::Vector(const Vector & vect)
 {
 	x = vect.x;
 	y = vect.y;
+	z = vect.z;
 }
 
 double Vector::get_X()
@@ -39,19 +37,19 @@ double Vector::get_Z()
 	return z;
 }
 
-void Vector::set_X(Vector &vect)
+void Vector::set_X(int mX)
 {
-	vect.x = x;
+	x = mX;
 }
 
-void Vector::set_Y(Vector &vect)
+void Vector::set_Y(int mY)
 {
-	vect.y = y;
+	y = mY;
 }
 
-void Vector::set_Z(Vector &vect)
+void Vector::set_Z(int mZ)
 {
-	vect.z = z;
+	z = mZ;
 }
 
 void Vector::clear()
@@ -61,7 +59,7 @@ void Vector::clear()
 	z = 0;
 }
 
-inline ostream & operator<<(ostream & os, const Vector& vect)
+ostream & operator<<(ostream & os, const Vector& vect)
 {
 
 	os << "X = " << vect.x << endl
@@ -108,7 +106,7 @@ Vector & Vector::operator=(Vector rhs)
 	return *this;
 }
 
-void Vector::swap(Vector & lhs, Vector & rhs)
+void swap(Vector & lhs, Vector & rhs)
 {
 	using std::swap;
 	swap(lhs.x, rhs.x);
@@ -156,9 +154,4 @@ Vector Vector::operator*(double d)
 	z *= d;
 
 	return *this;
-}
-
-int main() 
-{
-	return 0;
 }
